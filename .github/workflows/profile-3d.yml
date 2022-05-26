@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: yoshi389111/github-profile-3d-contrib@0.6.0
         env:
-          GITHUB_TOKEN: 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
-          USERNAME: joshuajdevine
+          GITHUB_TOKEN: ${{ secrets.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 }}
+          USERNAME: ${{ github.joshuajdevine }}
       - name: Commit & Push
         run: |
           git config user.name github-actions
@@ -22,3 +22,4 @@ jobs:
           git add -A .
           git commit -m "generated"
           git push
+
